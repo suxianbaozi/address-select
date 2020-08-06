@@ -26,7 +26,7 @@ npm i pingansec-address-select
 ```javascript
 var address =  new PinganAddressSelect({
         'onSelected':function (info) {
- 		   document.getElementById('show-address').value = info.province +' '+info.city + ' '+info.region;
+ 		   console.log('show-address').value = info.province +' '+info.city + ' '+info.region;
  	   }
     });
 address.setProvince('江苏省');
