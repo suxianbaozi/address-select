@@ -10,10 +10,12 @@
 
 
 安装 
+
 `
 npm i pingansec-address-select
 `
 
 或者
+
 `dist/address.min.js  你懂的
 `
