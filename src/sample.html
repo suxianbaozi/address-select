@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+</head>
+<body>
+<input type="text" id="show-address" />
+<script src="../dist/address.min.js"></script>
+<script>
+   var address =  new PinganAddressSelect({
+       'onSelected':function (info) {
+		   document.getElementById('show-address').value = info.province +' '+info.city + ' '+info.region;
+	   }
+   });
+   address.setProvince('江苏省');
+   address.setCity('宿迁市');
+   address.setRegion('宿城区');
+   document.getElementById('show-address').ontouchend = function () {
+       address.show();
+   };
+</script>
+</body>
+</html>

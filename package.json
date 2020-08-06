@@ -1,0 +1,22 @@
+{
+  "name": "pingansec-address-select",
+  "version": "1.0.1",
+  "description": "地址选择器",
+  "main": "src/index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "地址选择器"
+  ],
+  "author": "wangqs",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^4.2.0",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
