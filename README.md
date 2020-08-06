@@ -14,6 +14,12 @@
 
 ### 安装
 
+##### Vue
+`
+npm install pingansec-address-select
+`
+
+##### 其他
 
 `dist/address.min.js  你懂的
 `
@@ -22,7 +28,10 @@
 ### 用法
 
 ```javascript
-var address =  new PinganAddressSelect({
+//非vue 省略这行
+import AddressSelect from "pingansec-address-select";
+
+var address =  new AddressSelect({
         'onSelected':function (info) {
  		   console.log(info.province +' '+info.city + ' '+info.region);
  	   }
