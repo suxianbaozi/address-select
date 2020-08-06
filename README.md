@@ -23,18 +23,18 @@ npm i pingansec-address-select
 
 ### 用法
 
-`
- var address =  new PinganAddressSelect({
-       'onSelected':function (info) {
-		   document.getElementById('show-address').value = info.province +' '+info.city + ' '+info.region;
-	   }
-   });
-   address.setProvince('江苏省');
-   address.setCity('宿迁市');
-   address.setRegion('宿城区');
-   
-   //或者使用事件
-   address.show();
-`
+```javascript
+var address =  new PinganAddressSelect({
+        'onSelected':function (info) {
+ 		   document.getElementById('show-address').value = info.province +' '+info.city + ' '+info.region;
+ 	   }
+    });
+    address.setProvince('江苏省');
+    address.setCity('宿迁市');
+    address.setRegion('宿城区');
+    address.show();`
+```
+
+
 
 
