@@ -29,9 +29,13 @@ var address =  new PinganAddressSelect({
  		   console.log('show-address').value = info.province +' '+info.city + ' '+info.region;
  	   }
     });
+
+//设置预地址
 address.setProvince('江苏省');
 address.setCity('宿迁市');
 address.setRegion('宿城区');
+
+//弹出地址选择器
 address.show();
 ```
 
