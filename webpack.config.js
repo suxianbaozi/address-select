@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/address.js',
 	output: {
 		filename: 'address.min.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		libraryTarget: "umd"
 	},
 	module: {
 		"rules": [

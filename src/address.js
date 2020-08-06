@@ -3,7 +3,7 @@ import right from "./images/right.png";
 import closeImage from "./images/close.png";
 import "./main.css";
 
-function AddressSelect(options) {
+export function AddressSelect(options) {
 	var defaultOptions = {
 		'onSelected':function (address) {
 		}.bind(this),

@@ -1,8 +1,8 @@
 {
   "name": "pingansec-address-select",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "地址选择器",
-  "main": "src/index.js",
+  "main": "./dist/address.min.js",
   "scripts": {
     "watch": "webpack --watch",
     "build": "webpack --mode production"
