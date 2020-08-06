@@ -32,7 +32,7 @@ var address =  new PinganAddressSelect({
     address.setProvince('江苏省');
     address.setCity('宿迁市');
     address.setRegion('宿城区');
-    address.show();`
+    address.show();
 ```
 
 
