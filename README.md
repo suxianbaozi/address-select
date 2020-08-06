@@ -13,6 +13,7 @@
 `
 npm i pingansec-address-select
 `
+
 或者
-`address.min.js
+`dist/address.min.js  你懂的
 `
