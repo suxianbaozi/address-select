@@ -6,10 +6,12 @@ import "./main.css";
 export function AddressSelect(options) {
 	var defaultOptions = {
 		'onSelected':function (address) {
+			console.log(address);
 		}.bind(this),
 		'onClosed':function () {
 		},
-		'autoHide':true
+		'autoHide':true,
+		'regionOther':'其它区'
 	};
 	this.options = {
 		...defaultOptions,
@@ -111,6 +113,35 @@ AddressSelect.prototype = {
 			this.selectRegion();
 		}.bind(this));
 	},
+	initRegion:function(regionList){
+		this.regionSelected.innerHTML = '请选择';
+
+		if(this.options.regionOther) {
+			regionList.push({
+				'name':this.options.regionOther
+			});
+		}
+
+		this.initList(this.regionList,regionList,function (regionDetail,init) {
+			this.region = regionDetail.name;
+			this.regionSelected.innerHTML = this.region;
+
+			var width = this.regionSelected.offsetWidth;
+			this.moveCusor(width,this.regionSelected.offsetLeft);
+
+			if(!init) { //初始化地区，不再执行回调
+				this.options.onSelected({
+					'province':this.province,
+					'city':this.city,
+					'region':this.region
+				});
+
+				if(this.options.autoHide) {
+					this.hide();
+				}
+			}
+		}.bind(this));
+	},
 	moveCusor:function(width,left){
 		left -= 2;
 		this._setCss(this.cursor,{
@@ -170,28 +201,6 @@ AddressSelect.prototype = {
 		// 	requestAnimationFrame(rote);
 		// }.bind(this);
 		// rote();
-	},
-	initRegion:function(regionList){
-		this.regionSelected.innerHTML = '请选择';
-		this.initList(this.regionList,regionList,function (regionDetail,init) {
-			this.region = regionDetail.name;
-			this.regionSelected.innerHTML = this.region;
-
-			var width = this.regionSelected.offsetWidth;
-			this.moveCusor(width,this.regionSelected.offsetLeft);
-
-			if(!init) { //初始化地区，不再执行回调
-				this.options.onSelected({
-					'province':this.province,
-					'city':this.city,
-					'region':this.region
-				});
-
-				if(this.options.autoHide) {
-					this.hide();
-				}
-			}
-		}.bind(this));
 	},
 	initList:function(container,dataList,callback){
 		container.innerHTML = '';
