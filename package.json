@@ -1,6 +1,6 @@
 {
   "name": "pingansec-address-select",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "地址选择器",
   "main": "./dist/address.min.js",
   "scripts": {
