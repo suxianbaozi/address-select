@@ -3,7 +3,7 @@ import right from "./images/right.png";
 import closeImage from "./images/close.png";
 import "./main.css";
 
-export function AddressSelect(options) {
+export function PinganAddressSelect(options) {
 	var defaultOptions = {
 		'onSelected':function (address) {
 			console.log(address);
@@ -13,10 +13,16 @@ export function AddressSelect(options) {
 		'autoHide':true,
 		'regionOther':'其它区'
 	};
-	this.options = {
-		...defaultOptions,
-		...options
-	};
+
+	this.options = {};
+
+	for(var key in defaultOptions) {
+		this.options[key] = defaultOptions[key];
+	}
+	for(var key in options) {
+		this.options[key] = options[key];
+	}
+
 	this.container = document.createElement('div');
 	this.container.className = "address-select-container";
 	this.mask = document.createElement('div');
@@ -28,7 +34,7 @@ export function AddressSelect(options) {
 	this.initProvince();
 	this.currentSelected = null;
 }
-AddressSelect.prototype = {
+PinganAddressSelect.prototype = {
 	show:function () {
 		this._showDom(this.container);
 		this._showDom(this.mask);
@@ -370,4 +376,4 @@ AddressSelect.prototype = {
 		dom.clickCallback = callback;
 	}
 };
-export default AddressSelect;
+export default PinganAddressSelect;

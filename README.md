@@ -30,9 +30,9 @@ npm install pingansec-address-select
 
 ```javascript
 //非vue 省略这行
-import AddressSelect from "pingansec-address-select";
+import PinganAddressSelect from "pingansec-address-select";
 
-var address =  new AddressSelect({
+var address =  new PinganAddressSelect({
         'onSelected':function (info) {
  		   console.log(info.province +' '+info.city + ' '+info.region);
  	   }

@@ -7,10 +7,9 @@
     <script src="../dist/address.min.js"></script>
 </head>
 <body>
-<input type="text" id="show-address" />
-<script type="module">
-
-   var address =  new AddressSelect({
+<input type="text" id="show-address" readonly />
+<script>
+   var address =  new PinganAddressSelect({
        'onSelected':function (info) {
 		   document.getElementById('show-address').value = info.province +' '+info.city + ' '+info.region;
 	   },
@@ -19,7 +18,7 @@
    address.setProvince('江苏省');
    address.setCity('宿迁市');
    address.setRegion('其他区');
-   document.getElementById('show-address').ontouchend = function () {
+   document.getElementById('show-address').onclick = function () {
        address.show();
    };
 </script>
