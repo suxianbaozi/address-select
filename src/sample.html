@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <script src="../dist/address.min.js"></script>
+    <script src="../dist/auto-shrink.min.js"></script>
 </head>
+
+<style>
+    #test {
+        width: 700px;
+        background-color: red;
+        font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+    }
+</style>
+
+
 <body>
-<input type="text" id="show-address" readonly />
+<div class="auto-shrink" id="test" style="">从前有座山，1233hahahh啊哈哈哈哈就啊哈哈啊哈对对是打发斯蒂芬对哈哈，阿看见爱上大路口甲方阿斯顿发的</div>
 <script>
-   var address =  new PinganAddressSelect({
-       'onSelected':function (info) {
-		   document.getElementById('show-address').value = info.province +' '+info.city + ' '+info.region;
-	   },
-       'regionOther':'其他区'
-   });
-   address.setProvince('江苏省');
-   address.setCity('宿迁市');
-   address.setRegion('其他区');
-   document.getElementById('show-address').onclick = function () {
-       address.show();
-   };
+	AutoShrink.adjust(document.querySelector('#test'),{
+		maxSize:200
+    });
 </script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 {
-  "name": "pingansec-address-select",
-  "version": "1.0.9",
-  "description": "地址选择器",
-  "main": "./dist/address.min.js",
+  "name": "pingansec-auto-shrink",
+  "version": "1.0.4",
+  "description": "文字自动调整大小,撑满div",
+  "main": "./dist/auto-shrink.min.js",
   "scripts": {
     "watch": "webpack --watch",
     "build": "webpack --mode production"
   },
   "keywords": [
-    "地址选择器"
+    "text-shrink,字体大小自动调整"
   ],
   "author": "wangqs",
   "license": "ISC",

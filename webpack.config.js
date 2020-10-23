@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-	entry: './src/address.js',
+	entry: './src/auto-shrink.js',
 	output: {
-		filename: 'address.min.js',
+		filename: 'auto-shrink.min.js',
 		path: path.resolve(__dirname, 'dist'),
 		libraryTarget: "umd"
 	},
