@@ -19,8 +19,13 @@ export  var AutoShrink ={
 		return i>maxSize?maxSize:i;
 	},
 	adjust:function (dom,options) {
+
+		if(!dom) {
+			return false;
+		}
+
 		options = options || {};
-		var text = dom.innerText;
+		var text = dom.innerHTML;
 		var containerWidth = parseInt(getComputedStyle(dom).width);
 		var fontFamily = getComputedStyle(dom).fontFamily;
 		var maxFontSize = this.getMaxFontSize(text,containerWidth,fontFamily,options.minSize,options.maxSize);
